@@ -13,7 +13,7 @@ import {
   SparklesIcon,
   ArrowRightIcon,
 } from '@heroicons/react/24/outline';
-import Navigation from '@/components/Navigation';
+import Navbar from '@/components/Navbar';
 import HeroSlider from '@/components/HeroSlider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
