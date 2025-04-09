@@ -45,35 +45,30 @@ const Navbar = () => {
       children: [
         { name: 'Our Story', href: '/about' },
         { name: 'Our Team', href: '/about/team' },
-        { name: 'Facilities', href: '/about/facilities' },
         { name: 'Values & Mission', href: '/about/values' },
-        { name: 'Ofsted', href: '/about/ofsted' },
       ],
     },
     {
-      name: 'Programs & Services', 
-      href: '/programs',
+      name: 'Services', 
+      href: '/services',
       children: [
-        { name: 'Holiday Club', href: '/programs/holiday-club' },
-        { name: 'After School Club', href: '/programs/after-school' },
-        { name: 'Breakfast Club', href: '/programs/breakfast' },
-        { name: 'Preschool', href: '/programs/preschool' },
-        { name: 'Wraparound Care', href: '/programs/wraparound' },
+        { name: 'Accountancy Services', href: '/services/accountancy' },
+        { name: 'Tax Planning', href: '/services/tax-planning' },
+        { name: 'Bookkeeping', href: '/services/bookkeeping' },
+        { name: 'Payroll Services', href: '/services/payroll' },
+        { name: 'Business Advisory', href: '/services/business-advisory' },
       ],
     },
     {
-      name: 'Parents',
-      href: '/parents',
+      name: 'Resources',
+      href: '/resources',
       children: [
-        { name: 'Admissions', href: '/parents/admissions' },
-        { name: 'Fees', href: '/parents/fees' },
-        { name: 'FAQs', href: '/parents/faqs' },
-        { name: 'Policies', href: '/parents/policies' },
-        { name: 'Term Dates', href: '/parents/term-dates' },
+        { name: 'Tax Tips', href: '/resources/tax-tips' },
+        { name: 'Business Guides', href: '/resources/business-guides' },
+        { name: 'FAQs', href: '/resources/faqs' },
+        { name: 'News & Updates', href: '/resources/news' },
       ],
     },
-    { name: 'Gallery', href: '/gallery' },
-    { name: 'News', href: '/news' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -96,24 +91,12 @@ const Navbar = () => {
           >
             <Link href="/" className="flex items-center space-x-3">
               <Image
-                src="/media/logo-icon_only.png"
-                alt="Bisley Base Logo"
-                width={50}
+                src="/media/logo.svg"
+                alt="The Cameron Partnership Logo"
+                width={180}
                 height={50}
-                className="w-12 h-12"
+                className="h-12 w-auto"
               />
-              <div className="flex flex-col">
-                <span className={`text-xl font-bold tracking-tight transition-colors duration-300 ${
-                  isScrolled ? 'text-emerald-700' : 'text-white'
-                }`}>
-                  Bisley Base
-                </span>
-                <span className={`text-xs font-medium transition-colors duration-300 ${
-                  isScrolled ? 'text-emerald-600' : 'text-emerald-100'
-                }`}>
-                  Childcare & Preschool
-                </span>
-              </div>
             </Link>
           </motion.div>
 

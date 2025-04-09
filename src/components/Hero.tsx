@@ -47,56 +47,53 @@ const Hero = () => {
     <section className="relative h-screen overflow-hidden">
       {/* Media slider */}
       <div className="absolute inset-0">
-        {isClient && (
-          <>
-            {/* Current media with fade effect */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentMediaIndex}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1.5 }}
-                className="absolute inset-0"
-              >
-                {isVideo(heroMedia[currentMediaIndex]) ? (
-                  <div className="absolute inset-0 w-full h-full overflow-hidden">
-                    <video
-                      ref={videoRef}
-                      autoPlay
-                      muted
-                      playsInline
-                      loop
-                      className="absolute w-full h-full object-cover"
-                      style={{ objectPosition: 'center' }}
-                    >
-                      <source src={heroMedia[currentMediaIndex]} type="video/mp4" />
-                      Your browser does not support video playback.
-                    </video>
-                  </div>
-                ) : (
-                  <Image
-                    src={heroMedia[currentMediaIndex]}
-                    alt="Bisley Base childcare"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentMediaIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5 }}
+            className="absolute inset-0"
+          >
+            {isVideo(heroMedia[currentMediaIndex]) ? (
+              <div className="absolute inset-0 w-full h-full overflow-hidden">
+                {isClient && (
+                  <video
+                    ref={videoRef}
+                    autoPlay
+                    muted
+                    playsInline
+                    loop
+                    className="absolute w-full h-full object-cover"
+                    style={{ objectPosition: 'center' }}
+                  >
+                    <source src={heroMedia[currentMediaIndex]} type="video/mp4" />
+                    Your browser does not support video playback.
+                  </video>
                 )}
-              </motion.div>
-            </AnimatePresence>
-            
-            {/* Dark overlay with pattern */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70 mix-blend-multiply" />
-            <div 
-              className="absolute inset-0 opacity-20 mix-blend-overlay" 
-              style={{ 
-                backgroundImage: 'url("data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.2" fill-rule="evenodd"%3E%3Ccircle cx="3" cy="3" r="3"/%3E%3Ccircle cx="13" cy="13" r="3"/%3E%3C/g%3E%3C/svg%3E")',
-                backgroundSize: '20px 20px'
-              }}
-            />
-          </>
-        )}
+              </div>
+            ) : (
+              <Image
+                src={heroMedia[currentMediaIndex]}
+                alt="The Cameron Partnership"
+                fill
+                className="object-cover"
+                priority
+              />
+            )}
+          </motion.div>
+        </AnimatePresence>
+        
+        {/* Dark overlay with pattern */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70 mix-blend-multiply" />
+        <div 
+          className="absolute inset-0 opacity-20 mix-blend-overlay" 
+          style={{ 
+            backgroundImage: 'url("data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.2" fill-rule="evenodd"%3E%3Ccircle cx="3" cy="3" r="3"/%3E%3Ccircle cx="13" cy="13" r="3"/%3E%3C/g%3E%3C/svg%3E")',
+            backgroundSize: '20px 20px'
+          }}
+        />
       </div>
 
       {/* Hero content */}

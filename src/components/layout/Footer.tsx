@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FaFacebookF, FaInstagram, FaPinterestP, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaPinterestP, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaLinkedinIn } from 'react-icons/fa';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -43,9 +43,9 @@ export default function Footer() {
             viewport={{ once: true }}
             variants={footerAnimation}
           >
-            <h3 className="text-xl font-serif font-medium mb-6">Bookham Kitchens</h3>
+            <h3 className="text-xl font-serif font-medium mb-6">The Cameron Partnership</h3>
             <p className="text-gray-300 mb-4">
-              Family-run kitchen design and installation specialists in Surrey, providing bespoke solutions tailored to your needs.
+              A family-run firm of chartered accountants based in Chessington, providing expert accountancy services to small and medium-sized businesses since 1989.
             </p>
             <div className="flex space-x-4 mt-6">
               <a 
@@ -57,20 +57,12 @@ export default function Footer() {
                 <FaFacebookF className="h-4 w-4" />
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://linkedin.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-white/10 hover:bg-white/20 transition-colors p-2 rounded-full"
               >
-                <FaInstagram className="h-4 w-4" />
-              </a>
-              <a 
-                href="https://pinterest.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-white/10 hover:bg-white/20 transition-colors p-2 rounded-full"
-              >
-                <FaPinterestP className="h-4 w-4" />
+                <FaLinkedinIn className="h-4 w-4" />
               </a>
             </div>
           </motion.div>
@@ -85,33 +77,28 @@ export default function Footer() {
             <h3 className="text-xl font-serif font-medium mb-6">Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/kitchens/fitted" className="text-gray-300 hover:text-accent transition-colors">
-                  Fitted Kitchens
+                <Link href="/services/accountancy" className="text-gray-300 hover:text-accent transition-colors">
+                  Accountancy Services
                 </Link>
               </li>
               <li>
-                <Link href="/kitchens/replacement-doors" className="text-gray-300 hover:text-accent transition-colors">
-                  Replacement Doors
+                <Link href="/services/tax-planning" className="text-gray-300 hover:text-accent transition-colors">
+                  Tax Planning
                 </Link>
               </li>
               <li>
-                <Link href="/kitchens/cabinet-spray-painting" className="text-gray-300 hover:text-accent transition-colors">
-                  Cabinet Spray Painting
+                <Link href="/services/bookkeeping" className="text-gray-300 hover:text-accent transition-colors">
+                  Bookkeeping
                 </Link>
               </li>
               <li>
-                <Link href="/home-living/bedroom-cabinets" className="text-gray-300 hover:text-accent transition-colors">
-                  Bedroom Cabinets
+                <Link href="/services/payroll" className="text-gray-300 hover:text-accent transition-colors">
+                  Payroll Services
                 </Link>
               </li>
               <li>
-                <Link href="/home-living/home-office" className="text-gray-300 hover:text-accent transition-colors">
-                  Home Office
-                </Link>
-              </li>
-              <li>
-                <Link href="/building-services/kitchen-installation" className="text-gray-300 hover:text-accent transition-colors">
-                  Kitchen Installation
+                <Link href="/services/business-advisory" className="text-gray-300 hover:text-accent transition-colors">
+                  Business Advisory
                 </Link>
               </li>
             </ul>
@@ -127,33 +114,28 @@ export default function Footer() {
             <h3 className="text-xl font-serif font-medium mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/portfolio" className="text-gray-300 hover:text-accent transition-colors">
-                  Portfolio
-                </Link>
-              </li>
-              <li>
                 <Link href="/about" className="text-gray-300 hover:text-accent transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-300 hover:text-accent transition-colors">
-                  Blog
+                <Link href="/resources/tax-tips" className="text-gray-300 hover:text-accent transition-colors">
+                  Tax Tips
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources/business-guides" className="text-gray-300 hover:text-accent transition-colors">
+                  Business Guides
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources/news" className="text-gray-300 hover:text-accent transition-colors">
+                  News & Updates
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-accent transition-colors">
                   Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy-policy" className="text-gray-300 hover:text-accent transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms-of-service" className="text-gray-300 hover:text-accent transition-colors">
-                  Terms of Service
                 </Link>
               </li>
             </ul>
@@ -171,30 +153,29 @@ export default function Footer() {
               <li className="flex items-start">
                 <FaMapMarkerAlt className="h-5 w-5 text-accent mr-3 mt-1" />
                 <span className="text-gray-300">
-                  25 Church Road, Great Bookham<br />
-                  Leatherhead, Surrey<br />
-                  KT23 3PG
+                  Suite 37, Chessington Business Centre<br />
+                  Cox Lane, Chessington<br />
+                  Surrey KT9 1SD
                 </span>
               </li>
               <li className="flex items-center">
                 <FaPhoneAlt className="h-4 w-4 text-accent mr-3" />
-                <a href="tel:+441932391183" className="text-gray-300 hover:text-accent transition-colors">
-                  01932 391183
+                <a href="tel:+442083908407" className="text-gray-300 hover:text-accent transition-colors">
+                  020 8390 8407
                 </a>
               </li>
               <li className="flex items-center">
                 <FaEnvelope className="h-4 w-4 text-accent mr-3" />
-                <a href="mailto:sales@bookhamkitchens.co.uk" className="text-gray-300 hover:text-accent transition-colors">
-                  sales@bookhamkitchens.co.uk
+                <a href="mailto:mail@cameronpartnership.co.uk" className="text-gray-300 hover:text-accent transition-colors">
+                  mail@cameronpartnership.co.uk
                 </a>
               </li>
             </ul>
             <div className="mt-6">
               <h4 className="text-sm font-medium mb-2">Opening Hours</h4>
               <p className="text-gray-300 text-sm">
-                Monday - Friday: 9:00am - 5:30pm<br />
-                Saturday: 9:00am - 4:00pm<br />
-                Sunday: Closed
+                Monday - Friday: 9:00am - 5:00pm<br />
+                Saturday - Sunday: Closed
               </p>
             </div>
           </motion.div>
@@ -203,7 +184,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="py-6 border-t border-white/10 text-sm text-gray-400">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p>© {currentYear} Bookham Kitchens. All rights reserved.</p>
+            <p>© {currentYear} The Cameron Partnership. All rights reserved.</p>
             <p className="mt-2 md:mt-0">
               Designed with <span className="text-accent">♥</span> in Surrey
             </p>
